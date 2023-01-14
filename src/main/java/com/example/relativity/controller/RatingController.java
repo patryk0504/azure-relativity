@@ -36,7 +36,6 @@ public class RatingController {
         BookEntity book = bookRepository.findById(id).orElseThrow();
         RatingEntity ratingEntity = new RatingEntity();
         ratingEntity.setRating(rating);
-//        ratingEntity.setBook(book);
         ratingEntity.setUserId(userId);
         book.getRatingEntityList().add(ratingEntity);
         bookRepository.save(book);

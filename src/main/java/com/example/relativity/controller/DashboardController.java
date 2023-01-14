@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class DashboardController {
 
+    @GetMapping("/error")
+    public String getError() {
+        throw new RuntimeException("error triggered");
+    }
+
     @GetMapping("/dashboard")
     public String getDashboard() {
         return "dashboard";
