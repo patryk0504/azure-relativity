@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Book Ratings</title>
+  <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
+</head>
+<body>
+<div th:include="header :: header"></div>
+<h2>Book Ratings</h2>
+<div th:object="${book}">
+  <p>Title: <span th:text="*{title}"></span></p>
+  <p>Author: <span th:text="*{author}"></span></p>
+  <p>ISBN: <span th:text="*{isbn}"></span></p>
+</div>
+<h3>Ratings</h3>
+<table>
+  <thead>
+  <tr>
+    <th>Rating</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="rating : ${ratings}">
+    <td th:text="${rating}"></td>
+  </tr>
+  </tbody>
+</table>
+<form method="post" th:action="@{/book/ratings/{id}(id=${book.id})}">
+  <div>
+    <label for="rating">Add Rating:</label>
+    <input id="rating" max="5" min="1" name="rating" type="number"/>
+  </div>
+  <div>
+    <input type="submit" value="Add Rating"/>
+  </div>
+</form>
+</body>
+</html>

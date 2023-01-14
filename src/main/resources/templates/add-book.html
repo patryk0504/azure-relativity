@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
+  <title>Add Book</title>
+</head>
+<body>
+<form action="/book/add" enctype="multipart/form-data" method="post">
+  <input name="_csrf" th:value="${_csrf.token}" type="hidden"/>
+  <label for="title">Title:</label>
+  <input id="title" name="title" type="text">
+  <br>
+  <label for="author">Author:</label>
+  <input id="author" name="author" type="text">
+  <br>
+  <label for="isbn">ISBN:</label>
+  <input id="isbn" name="isbn" type="text">
+  <br>
+  <label for="description">Description:</label>
+  <input id="description" name="description" type="text">
+  <br>
+  <input type="submit" value="Add Book">
+</form>
+</body>
+</html>

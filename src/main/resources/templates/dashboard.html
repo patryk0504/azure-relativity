@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
+    <title>Dashboard</title>
+</head>
+<body>
+<h1>Welcome to the Books rating service</h1>
+<div th:include="header :: header"></div>
+<div class="dashboard">
+    <div class="section">
+        <h2>Books</h2>
+        <a th:href="@{/book}">View All Books</a>
+        <a th:href="@{/book/add}">Add a Book</a>
+    </div>
+</div>
+
+</body>
+</html>
