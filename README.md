@@ -3,6 +3,9 @@ Simple Spring Web Application
 
 URL: https://relativity-proj-sledzp.azurewebsites.net/dashboard
 
+Uproszczony schemat wykorzystanych komponentów:
+![alt app diagram](https://github.com/patryk0504/azure-relativity/blob/master/azure-app-diagram.png)
+
 Wykorzystane narzedzia:
 - autoryzacja z wykorzystaniem Azure AD + customowy formularz rejestracji (sign-up workflow)
 - github actions CI/CD z uruchamianymi testami + customowy plikiem deploymentu
